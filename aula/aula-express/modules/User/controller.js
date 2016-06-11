@@ -1,4 +1,4 @@
-const Model = require('./schema');
+const Model = require('./model');
 const  callback = (err, data, res) => {
   if(err) res.json(err);
   else res.json(data);
