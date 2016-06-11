@@ -20,14 +20,14 @@ const Controller = {
     Model.findOne(query, (err, data) => callback(err, data, res));
   },
   alterar: (req, res) => {
-    const query = {name: "João"};
-    const mod = {email: 'Joao@xvideos.com'};
+    const query = {_id: req.params.id};
+    const mod = req.body;
     Model.update(query, mod, (err, data) => {
       callback(err, data, res);
     });
   },
   remover: (req, res) => {
-    const query = {name: "João"};
+    const query = {_id: req.params.id};
     Model.remove(query, (err, data) => {
       callback(err, data, res);
     });
